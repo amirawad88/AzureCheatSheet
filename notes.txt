@@ -1,3 +1,11 @@
-To create diagnostics settings for a resource using Azure CLI, what command should you use?
+# To create diagnostics settings for a resource using Azure CLI, what command should you use?
 az monitor diagnostic-settings create
+
+# List VMs in a subscription	
+Get-AzVM
+
+# connect local powershell to azure
+Intall-Module -Name Az -Force
+Connect-AzAccount
+
 
