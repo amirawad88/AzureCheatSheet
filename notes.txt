@@ -8,4 +8,32 @@ Get-AzVM
 Intall-Module -Name Az -Force
 Connect-AzAccount
 
+# get azRG lists
+Get-AzResourceGroup
+
+#create vnm
+$Resourcegroup = New-AzResourceGroup - Name "AzurePShell" -Location "CenrtalUS"
+$AzureVM = New-AzVM - ResourceGroupNAme $ResourceGroup.ResourcGroupName -Location $ResrouceGroup.Location -Name "AzurePSVM"
+
+#Remove 
+Remove-AzResourceGroup -Name $ResourceGroup.ResourceGroupName -Force -AsJob
+
+#Create a VM	
+New-AzVM -ResourceGroupName $myResourceGroup -Location $location -VM $vm
+
+#Update a VM	
+Update-AzVM -ResourceGroupName $myResourceGroup -VM $vm
+
+#Start a VM	
+Start-AzVM -ResourceGroupName $myResourceGroup -Name $myVM
+
+#Stop a VM	
+Stop-AzVM -ResourceGroupName $myResourceGroup -Name $myVM
+
+#Restart a running VM	
+Restart-AzVM -ResourceGroupName $myResourceGroup -Name $myVM
+
+#Delete a VM	
+Remove-AzVM -ResourceGroupName $myResourceGroup -Name $myVM
+
 
