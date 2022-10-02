@@ -1,0 +1,3 @@
+To create diagnostics settings for a resource using Azure CLI, what command should you use?
+az monitor diagnostic-settings create
+
