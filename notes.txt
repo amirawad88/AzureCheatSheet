@@ -36,4 +36,4 @@ Restart-AzVM -ResourceGroupName $myResourceGroup -Name $myVM
 #Delete a VM	
 Remove-AzVM -ResourceGroupName $myResourceGroup -Name $myVM
 
-
+#
